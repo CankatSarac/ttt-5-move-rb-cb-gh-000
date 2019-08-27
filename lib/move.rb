@@ -7,12 +7,13 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
-def input_to_index
-  puts "Welcome to Tic Tac Toe!"
-  board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-  puts "Where would you like to go?"
-  input = gets.strip
-  index = input_to_index(input)
-  move(board, index)
-  puts display_board(board)
+
+
+def input_to_index(input)
+  input = input.to_i
+  input = input - 1
+end
+
+ def move(board, input, character = "X")
+  board[input] = character
 end
